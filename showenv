@@ -1,6 +1,3 @@
-
-
 echo "showenv "
-
 env | grep TRUST
 
