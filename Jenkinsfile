@@ -30,6 +30,8 @@ pipeline {
                   sh '''
                     echo "hi"
                     echo "$TEST"
+                    echo "ROX_CENTRAL_ENDPOINT $ROX_CENTRAL_ENDPOINT" 
+                    echo "$ROX_CENTRAL_ENDPOINT" 
                     echo "$TRUSTIFICATION_BOMBASTIC_API_URL" | wc 
                     echo "$TRUSTIFICATION_OIDC_ISSUER_URL" | wc 
                     echo "$TRUSTIFICATION_OIDC_CLIENT_ID" | wc 
