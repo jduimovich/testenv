@@ -19,7 +19,10 @@ pipeline {
         stage('test') {
             steps {
                 script {
-                    sh "bash showenv"
+                  sh '''
+                    echo "hi"
+                    env 
+                  '''
                 }
             }
         } 
