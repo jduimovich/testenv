@@ -17,6 +17,7 @@ pipeline {
                 script {
                   sh '''
                     echo "hi"
+                    echo "$TEST"
                     env 
                   '''
                 }
