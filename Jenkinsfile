@@ -18,11 +18,11 @@ pipeline {
                   sh '''
                     echo "hi"
                     echo "$TEST"
-                    echo "$TRUSTIFICATION_BOMBASTIC_API_URL"
-                    echo "$TRUSTIFICATION_OIDC_ISSUER_URL"
-                    echo "$TRUSTIFICATION_OIDC_CLIENT_ID"
-                    echo "$TRUSTIFICATION_OIDC_CLIENT_SECRET"
-                    echo "$TRUSTIFICATION_SUPPORTED_CYCLONEDX_VERSION"
+                    echo "$TRUSTIFICATION_BOMBASTIC_API_URL" | wc 
+                    echo "$TRUSTIFICATION_OIDC_ISSUER_URL" | wc 
+                    echo "$TRUSTIFICATION_OIDC_CLIENT_ID" | wc 
+                    echo "$TRUSTIFICATION_OIDC_CLIENT_SECRET" | wc 
+                    echo "$TRUSTIFICATION_SUPPORTED_CYCLONEDX_VERSION" | wc 
                     env 
                   '''
                 }
