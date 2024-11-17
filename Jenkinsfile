@@ -6,10 +6,8 @@ library identifier: 'RHTAP_Jenkins@main', retriever: modernSCM(
 
 pipeline {
     agent any
-    environment {  
-        /* URL of the BOMbastic api host (e.g. https://sbom.trustification.dev) */
-        TRUSTIFICATION_BOMBASTIC_API_URL = credentials('TRUSTIFICATION_BOMBASTIC_API_URL')
-        /* URL of the OIDC token issuer (e.g. https://sso.trustification.dev/realms/chicken) */
+    environment {   
+        TRUSTIFICATION_BOMBASTIC_API_URL = credentials('TRUSTIFICATION_BOMBASTIC_API_URL') 
         TRUSTIFICATION_OIDC_ISSUER_URL = credentials('TRUSTIFICATION_OIDC_ISSUER_URL')
         TRUSTIFICATION_OIDC_CLIENT_ID = credentials('TRUSTIFICATION_OIDC_CLIENT_ID')
         TRUSTIFICATION_OIDC_CLIENT_SECRET = credentials('TRUSTIFICATION_OIDC_CLIENT_SECRET')
