@@ -9,6 +9,7 @@ pipeline {
         TEST1 = credentials('TEST1') 
         TEST2 = credentials('TEST2') 
         TEST3 = credentials('TEST3')  
+        TEST3 = credentials('MISSING')  
          
         TRUSTIFICATION_BOMBASTIC_API_URL = credentials('TRUSTIFICATION_BOMBASTIC_API_URL') 
         TRUSTIFICATION_OIDC_ISSUER_URL = credentials('TRUSTIFICATION_OIDC_ISSUER_URL')
