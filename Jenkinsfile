@@ -19,6 +19,9 @@ pipeline {
             steps {
                 script {
                   sh '''
+                    pwd
+                    ls -al 
+                    
                     echo "Testing for 123 or 321 "
                     if [[ "TEST123" == "123" ]]; then
                         echo "---------------------------------"
