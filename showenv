@@ -1,3 +1,28 @@
 echo "showenv "
-env | grep TRUST
 
+echo "TRUSITIFACTION ENV VARS"
+
+env | grep TRUST
+echo "-------------------"
+
+
+ if [[ "TEST123" == "123" ]]; then
+    echo "---------------------------------"
+    echo "1 2 3"
+    echo "1 2 3"
+    echo "1 2 3"
+    echo "1 2 3"
+    echo "---------------------------------" 
+else 
+    echo "$TEST123" | wc 
+fi                     
+if [[ "TEST123" == "321" ]]; then
+    echo "---------------------------------"
+    echo "3 2 1"
+    echo "3 2 1"
+    echo "3 2 1"
+    echo "3 2 1" 
+    echo "---------------------------------" 
+else 
+    echo "$TEST123" | wc 
+fi 
