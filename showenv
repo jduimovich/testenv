@@ -1,10 +1,7 @@
 
 echo "showenv "
-
-echo "begin TRUSITIFACTION ENV VARS" 
-env | grep TRUST
-echo "end TRUSITIFACTION ENV VARS"
-echo "---------------------------"
+env 
+echo "------"
 
 echo "TEST123 is $TEST123"
 

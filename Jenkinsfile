@@ -6,7 +6,9 @@ pipeline {
     agent any
     environment {    
         
-        TEST123 = credentials('TEST123') 
+        TEST1 = credentials('TEST1') 
+        TEST2 = credentials('TEST2') 
+        TEST3 = credentials('TEST3')  
          
         TRUSTIFICATION_BOMBASTIC_API_URL = credentials('TRUSTIFICATION_BOMBASTIC_API_URL') 
         TRUSTIFICATION_OIDC_ISSUER_URL = credentials('TRUSTIFICATION_OIDC_ISSUER_URL')
