@@ -21,7 +21,7 @@ pipeline {
                   sh '''
                     pwd
                     ls -al  
-                    echo "SIZE OF TEST123
+                    echo "SIZE OF TEST123"
                     echo "$TEST123" | wc  
                     echo 
                     bash showenv 
