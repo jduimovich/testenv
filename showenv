@@ -15,7 +15,9 @@ echo "---------------------------"
     echo "1 2 3"
     echo "end TEST123 ---------------------------------" 
 else 
+    echo "NO MATCH to 1 2 3" 
     echo "$TEST123" | wc 
+    echo "--------------- NO MATCH to 1 2 3" 
 fi                     
 if [[ "TEST123" == "321" ]]; then
     echo "TEST123 ---------------------------------" 
@@ -25,5 +27,7 @@ if [[ "TEST123" == "321" ]]; then
     echo "3 2 1" 
     echo "end TEST123 ---------------------------------" 
 else 
+    echo "NO MATCH to 3 2 1 " 
     echo "$TEST123" | wc 
+    echo "--------------- NO MATCH to 3 2 1 " 
 fi 
