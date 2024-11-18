@@ -6,8 +6,9 @@ env | grep TRUST
 echo "end TRUSITIFACTION ENV VARS"
 echo "---------------------------"
 
+echo "TEST123 is $TEST123"
 
- if [[ "TEST123" == "123" ]]; then
+ if [[ "$TEST123" == "123" ]]; then
     echo "TEST123 ---------------------------------"
     echo "1 2 3"
     echo "1 2 3"
@@ -19,7 +20,7 @@ else
     echo "$TEST123" | wc 
     echo "--------------- NO MATCH to 1 2 3" 
 fi                     
-if [[ "TEST123" == "321" ]]; then
+if [[ "$TEST123" == "321" ]]; then
     echo "TEST123 ---------------------------------" 
     echo "3 2 1"
     echo "3 2 1"
