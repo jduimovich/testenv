@@ -40,6 +40,7 @@ pipeline {
                         echo "---------------------------------" 
                     fi  
                     echo "$TEST123" | wc  
+                    bash showenv 
                      
                   '''
                 }
