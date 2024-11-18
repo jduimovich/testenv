@@ -1,29 +1,29 @@
 
 echo "showenv "
 
-echo "TRUSITIFACTION ENV VARS"
-
+echo "begin TRUSITIFACTION ENV VARS" 
 env | grep TRUST
-echo "-------------------"
+echo "end TRUSITIFACTION ENV VARS"
+echo "---------------------------"
 
 
  if [[ "TEST123" == "123" ]]; then
-    echo "---------------------------------"
+    echo "TEST123 ---------------------------------"
     echo "1 2 3"
     echo "1 2 3"
     echo "1 2 3"
     echo "1 2 3"
-    echo "---------------------------------" 
+    echo "end TEST123 ---------------------------------" 
 else 
     echo "$TEST123" | wc 
 fi                     
 if [[ "TEST123" == "321" ]]; then
-    echo "---------------------------------"
+    echo "TEST123 ---------------------------------" 
     echo "3 2 1"
     echo "3 2 1"
     echo "3 2 1"
     echo "3 2 1" 
-    echo "---------------------------------" 
+    echo "end TEST123 ---------------------------------" 
 else 
     echo "$TEST123" | wc 
 fi 

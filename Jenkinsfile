@@ -20,9 +20,10 @@ pipeline {
                 script {
                   sh '''
                     pwd
-                    ls -al  
-                    echo "SIZE OF TEST123"
+                    ls -al   
+                    echo "begin Size of TEST123"
                     echo "$TEST123" | wc  
+                    echo "end Size of TEST123"
                     echo 
                     bash showenv 
                      
