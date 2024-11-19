@@ -1,7 +1,12 @@
 pipeline {
     agent any
-    environment {     
-        TEST_MISSING = credentials('TEST_MISSING') 
+    environment {          
+        try {
+            TEST_MISSING = credentials('TEST_MISSING') 
+        }
+        catch(all) {
+             TEST_MISSING="its missing"
+        } 
     }
     stages {
         stage('test') {
