@@ -7,8 +7,8 @@ pipeline {
         stage('test') {
             steps {
                 script {
-                  sh '''   
-                    echo "$ZZZZZ" | wc                        
+                  sh '''    
+                    echo "$ZZZZZ" base64  
                   '''
                 }
             }
