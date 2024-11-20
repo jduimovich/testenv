@@ -3,6 +3,7 @@ pipeline {
     environment {      
         TEST_MISSING = credentials('TEST_MISSING')   
         ZZZ="${TEST_MISSING}"
+        ZZZ="${NON_EXISTENT}"
     }
     stages {
         stage('test') {
