@@ -8,7 +8,7 @@ pipeline {
             steps {
                 script {
                   sh '''    
-                    echo "$ZZZZZ" base64  
+                    echo "$ZZZZZ" | base64  
                   '''
                 }
             }
