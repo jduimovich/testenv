@@ -3,7 +3,7 @@ pipeline {
     environment {      
         TEST_MISSING = credentials('TEST_MISSING')   
         ZZZ="${TEST_MISSING}"
-        ZZZ="${NON_EXISTENT}"
+        YYY="${NON_EXISTENT}"
     }
     stages {
         stage('test') {
@@ -11,7 +11,8 @@ pipeline {
                 script {
                   sh '''
                     echo "$TEST_MISSING" | wc      
-                    echo "$ZZZ" | wc                        
+                    echo "$ZZZ" | wc                 
+                    echo "$YYY" | wc                        
                   '''
                 }
             }
