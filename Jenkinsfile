@@ -1,4 +1,4 @@
-library identifier: 'RHTAP_Jenkins@main', retriever: modernSCM(
+library identifier: 'RHTAP_Jenkins@dev', retriever: modernSCM(
   [$class: 'GitSCMSource',
    remote: 'https://github.com/jduimovich/tssc-sample-jenkins.git'])
 
