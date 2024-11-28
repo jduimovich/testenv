@@ -1,7 +1,15 @@
 pipeline {
     agent any
     environment {    
-        script {
+        
+        
+        TEST=credentials("COSIGN_SECRET_KEY") 
+        TEST2=credentials("NON_EXISTENT") 
+    }
+    stages {
+        stage('test') {
+            steps {
+                script {
           try { 
                 sh '''    
                     echo "hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh" 
@@ -13,13 +21,7 @@ pipeline {
                   '''
           }
         }
-        
-        TEST=credentials("COSIGN_SECRET_KEY") 
-        TEST2=credentials("NON_EXISTENT") 
-    }
-    stages {
-        stage('test') {
-            steps {
+                
                 script {
                   sh '''    
                     echo "$TEST" | base64  
