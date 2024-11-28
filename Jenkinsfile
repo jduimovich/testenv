@@ -4,15 +4,16 @@ pipeline {
         
         
         TEST=credentials("COSIGN_SECRET_KEY") 
-        TEST2=credentials("NON_EXISTENT") 
     }
     stages {
         stage('test') {
             steps {
                 script {
+                    echo  credentials("NON_EXISTENT") 
           try { 
                 sh '''    
                     echo "hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh" 
+                    
                   '''
           } catch (Exception e) {
               echo 'Exception occurred: ' + e.toString()
