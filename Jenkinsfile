@@ -4,15 +4,15 @@ pipeline {
         script {
           try { 
                 sh '''    
-                    echo "HI" 
+                    echo "hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh" 
                   '''
           } catch (Exception e) {
               echo 'Exception occurred: ' + e.toString()
                 sh '''    
-                    echo "HI" 
+                    echo "zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz" 
                   '''
           }
-}
+        }
         
         TEST=credentials("COSIGN_SECRET_KEY") 
         TEST2=credentials("NON_EXISTENT") 
