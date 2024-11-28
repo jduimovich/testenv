@@ -12,7 +12,7 @@ pipeline {
                     echo "In-Script" 
                     try {  
                         echo "In-Try" 
-                        withCredentials(bindings: [sshUserPrivateKey(credentialsId: 'jenkins-ssh-key-for-abc', \
+                        withCredentials(bindings: [sshUserPrivateKey(credentialsId: 'COSIGN_SECRET_KEY', \
                                                                      keyFileVariable: 'SSH_KEY_FOR_ABC')]) {
                         sh  '''
                             echo "In withCredentials"
