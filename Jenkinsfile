@@ -1,3 +1,4 @@
+
 pipeline {
     agent any
     environment {     
@@ -6,12 +7,14 @@ pipeline {
     stages {
         stage('test') {
             steps {
+                script  { 
                 try { 
-                withCredentials(bindings: [sshUserPrivateKey(credentialsId: 'jenkins-ssh-key-for-abc', \
-                                                             keyFileVariable: 'SSH_KEY_FOR_ABC')]) {
-                }
-                } catch (all) { 
-                    echo "Error" 
+                    withCredentials(bindings: [sshUserPrivateKey(credentialsId: 'jenkins-ssh-key-for-abc', \
+                                                                 keyFileVariable: 'SSH_KEY_FOR_ABC')]) {
+                    }
+                    } catch (all) { 
+                        echo "Error" 
+                    }
                 }
                 
             }
