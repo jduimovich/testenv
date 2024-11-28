@@ -1,6 +1,19 @@
 pipeline {
     agent any
-    environment {          
+    environment {    
+        script {
+          try { 
+                sh '''    
+                    echo "HI" 
+                  '''
+          } catch (Exception e) {
+              echo 'Exception occurred: ' + e.toString()
+                sh '''    
+                    echo "HI" 
+                  '''
+          }
+}
+        
         TEST=credentials("COSIGN_SECRET_KEY") 
         TEST2=credentials("NON_EXISTENT") 
     }
