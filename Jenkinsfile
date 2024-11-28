@@ -1,14 +1,13 @@
 pipeline {
     agent any
-    environment {    
-        
-        
+    environment {     
         TEST=credentials("COSIGN_SECRET_KEY") 
     }
     stages {
         stage('test') {
             steps {
                 script {
+                    echo  "Hello"
                     echo  credentials("NON_EXISTENT") 
           try { 
                 sh '''    
