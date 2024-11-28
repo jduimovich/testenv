@@ -6,8 +6,12 @@ pipeline {
     stages {
         stage('test') {
             steps {
+                try { 
                 withCredentials(bindings: [sshUserPrivateKey(credentialsId: 'jenkins-ssh-key-for-abc', \
                                                              keyFileVariable: 'SSH_KEY_FOR_ABC')]) {
+                }
+                } catch (all) { 
+                    echo "Error" 
                 }
                 
             }
