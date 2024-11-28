@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {          
-        ZZZZZ="${NON_EXISTENT}"
+        TEST="${NON_EXISTENT}"
     }
     stages {
         stage('test') {
