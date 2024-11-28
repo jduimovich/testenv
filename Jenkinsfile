@@ -7,17 +7,24 @@ pipeline {
     stages {
         stage('test') {
             steps {
+                echo "Pre-Script" 
                 script  { 
-                    try { 
+                    echo "In-Script" 
+                    try {  
+                        echo "In-Try" 
                         withCredentials(bindings: [sshUserPrivateKey(credentialsId: 'jenkins-ssh-key-for-abc', \
                                                                      keyFileVariable: 'SSH_KEY_FOR_ABC')]) {
                         sh  '''
-                           export AAA=666
+                            echo "In withCredentials"
+                           `export AAA=666
+                            echo "InWC AAA $AAA"
                            '''
                         }
+                        echo "after withCredentials" 
                     } catch (all) { 
                         echo "Error" 
                     }
+                    echo "Next" 
                      sh  '''
                            echo $AAA
                            '''
