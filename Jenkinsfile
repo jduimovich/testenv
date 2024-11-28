@@ -1,8 +1,8 @@
 pipeline {
     agent any
     environment {          
-        TEST="${NON_EXISTENT}"
-        TEST2="${NON_EXISTENT2}"
+        TEST=credentials("COSIGN_SECRET_KEY") 
+        TEST2="${COSIGN_SECRET_KEY}" 
     }
     stages {
         stage('test') {
