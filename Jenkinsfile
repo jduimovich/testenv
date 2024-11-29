@@ -1,4 +1,8 @@
-    
+
+library identifier: 'RHTAP_Jenkins@v1.2', retriever: modernSCM(
+  [$class: 'GitSCMSource',
+   remote: 'https://github.com/jduimovich/tssc-sample-jenkins.git'])
+
 pipeline {
     agent any
     environment {     
