@@ -1,5 +1,5 @@
 
-library identifier: 'RHTAP_Jenkins@v1.2', retriever: modernSCM(
+library identifier: 'RHTAP_Jenkins@v1.3', retriever: modernSCM(
   [$class: 'GitSCMSource',
    remote: 'https://github.com/redhat-appstudio/tssc-sample-jenkins.git'])
 
