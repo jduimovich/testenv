@@ -1,4 +1,4 @@
-@Library('RHTAP_Jenkins') _
+@Library('RHTAP_Jenkins@v1.3') _
 
 pipeline {
     agent any
