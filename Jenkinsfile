@@ -1,7 +1,4 @@
-
-library identifier: 'RHTAP_Jenkins@v1.3', retriever: modernSCM(
-  [$class: 'GitSCMSource',
-   remote: 'https://github.com/redhat-appstudio/tssc-sample-jenkins.git'])
+@Library('RHTAP_Jenkins@v1.3') 
 
 pipeline {
     agent any
