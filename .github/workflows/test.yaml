@@ -13,8 +13,7 @@ jobs:
       packages: write
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: ./.github/actions/go
+      - uses: actions/checkout@v4 
 
       - name: GitHub Release
         env:
