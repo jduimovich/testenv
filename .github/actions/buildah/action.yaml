@@ -16,7 +16,7 @@ inputs:
   IMAGE_REPO_PASSWORD:
     description: Makefile's IMAGE_REPO_PASSWORD variable
     required: false
-    default: "none"
+    default: ${{ secrets.GITHUB_TOKEN }}
   tags:
     description: Comma-separated list of tags to apply to the image
     required: false
@@ -33,7 +33,7 @@ runs:
     - name: Log in to Container Registry
       shell: bash
       run: |
-        make login-buildah \
+        echo make login-buildah \
           IMAGE_REPO="${{ inputs.IMAGE_REPO }}" \
           IMAGE_REPO_USERNAME="${{ inputs.IMAGE_REPO_USERNAME }}" \
           IMAGE_REPO_PASSWORD="${{ inputs.IMAGE_REPO_PASSWORD }}"
@@ -41,7 +41,7 @@ runs:
     - name: Build container image
       shell: bash
       run: |
-        make image-buildah \
+        echo make image-buildah \
           IMAGE_REPO="${{ inputs.IMAGE_REPO }}" \
           IMAGE_NAMESPACE="${{ inputs.IMAGE_NAMESPACE }}"
 
