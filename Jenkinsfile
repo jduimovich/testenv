@@ -1,10 +1,5 @@
-@Library('RHTAP_Jenkins@v1.3') _
-
 pipeline {
-    agent any
-    environment {     
-        TEST=credentials("COSIGN_SECRET_KEY") 
-    }
+    agent any 
     stages {
         stage('test') {
             steps { 
