@@ -1,10 +1,7 @@
 ---
 name: release
 
-on:
-  workflow_dispatch:
-    tags:
-      - "v*"
+on: [workflow_dispatch]
 
 jobs:
   release:
