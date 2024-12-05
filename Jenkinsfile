@@ -7,28 +7,11 @@ pipeline {
     }
     stages {
         stage('test') {
-            steps {
-                echo "Pre-Script" 
-                script  { 
-                    echo "In-Script" 
-                    try {  
-                        echo "In-Try" 
-                        withCredentials(bindings: [sshUserPrivateKey(credentialsId: 'COSIGN_SECRET_KEY', \
-                                                                     keyFileVariable: 'SSH_KEY_FOR_ABC')]) {
-                        sh  '''
-                            echo "In withCredentials"
-                           `export AAA=666
-                            echo "InWC AAA $AAA"
-                           '''
-                        }
-                        echo "after withCredentials" 
-                    } catch (all) { 
-                        echo "Error" 
-                    }
-                    echo "Next" 
+            steps { 
+                script  {  
                      sh  '''
-                           echo $AAA
-                           '''
+                          curl https://raw.githubusercontent.com/redhat-appstudio/tssc-sample-sbom-scans/refs/heads/main/live-demo
+                        '''
                     }
                 }
             }
